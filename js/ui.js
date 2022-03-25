@@ -85,4 +85,17 @@ $(document).ready(function() {
         $('#container .section .listWrap.projectPage').removeClass('hover');
         $('#container .section .listWrap.contactPage').removeClass('hover');
     }
+
+    const today = new Date();
+    const birthDate = new Date(2002, 11, 19);
+
+    let age = today.getFullYear() - birthDate.getFullYear() + 1;
+    let email = "sky11916@naver.com";
+    let myAge = document.getElementsByClassName('myAge');
+    let myEmail = document.getElementsByClassName('myEmail');
+
+    for(let i = 0; i < myAge.length; i++) {
+        myAge[i].innerHTML = "나이: " + age;
+        myEmail[i].innerHTML = "이메일: " + email;
+    }
 });
